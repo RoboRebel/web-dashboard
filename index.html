@@ -1,0 +1,62 @@
+<html>
+<head>
+<style>
+.connection{
+	width: 100%;
+	height: 64px;
+}
+.stream{
+	margin: 0;
+	display: block;
+	float: left;
+	min-width: 33.333333%;
+	max-height: 475px;
+}
+.vid-stream{
+	width: 100%;
+	z-index: -1;
+}
+.overlay{
+	display: block;
+	margin: 0 auto;
+}
+#values{
+	float: left;
+}
+.sd-value{
+	float: left;
+	margin: 24;
+	font-size: 24;
+}
+body{
+	margin: 0;
+}
+marquee{
+	font-size: 64px;
+	color: white;
+	font-family: sans-serif;
+}
+</style>
+<script src="/networktables/networktables.js"></script>
+</head>
+<body>
+<div class="connection">
+<marquee behavior="alternate"> ROBOREBELS TEAM 1329 </marquee>
+</div>
+<div class="stream">
+<img src="http://10.13.29.3:1182/stream.mjpg" class="vid-stream">
+</div>
+<div class="stream">
+<img src="ret.png" class="overlay">
+<img src="http://10.13.29.3:1183/stream.mjpg" class="vid-stream" style="position: relative; top: -380;">
+</div>
+<div class="stream">
+<img src="http://10.13.29.3:1181/stream.mjpg" class="vid-stream">
+</div>
+<div id="values">
+<div class="sd-value" id="/SmartDashboard/AVG LIDAR Distance (in)"> Value 1 </div>
+<div class="sd-value" id="/SmartDashboard/NavX Yaw"> Value 2 </div>
+</div>
+<script src="dash.js"></script>
+</body>
+</html>
